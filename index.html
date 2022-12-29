@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Second trial on website using bootstrap</title>
+    <link rel="stylesheet" href="/HTML_And_CSS_Template_Two-main/css/styl.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/HTML_And_CSS_Template_Two-main/css/plans.scss" />
+    
+    
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css"
+    /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+  </head>
+  <body>
+    <!-- The header section, it has no problem with convention it is responsive in all breakpoints -->
+    <header class="container container-sm container-md">
+      <nav
+      class="navbar navbar-expand-lg  pt-20  jusify-content-center container border-bottom ps position-absolute" style="z-index: 2"
+    >
+      <div class="container container-sm container-md">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <a href="#" class="logo">
+            <img decoding="async" src="images/logo.png" alt="Logo" /> </a
+        ></a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active " aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control form-control-sm me-0"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              style="background-color: transparent"
+            />
+            <button class="btn btn-sm btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    </header>
+   
+    <!-- I divided the main part to the whole page, its not resposive , and I think the "sm" "md" whould fix the problem -->
+    <!-- after adding the small and medium points, it fixed the issue but I don't like how the font is not changeing size, so drop down to the caption section -->
+    <main>
+      <div class="d-md-flex d-md-flex d-flex justify-content-center align-items-start h-100  flex-column"
+      style="
+        overflow-x:hidden;
+        z-index: 0;
+        background-size: cover;
+        
+      ">
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner ">
+          <div class="carousel-item active bg-image">
+            <img
+              src="/HTML_And_CSS_Template_Two-main/images/landing.jpg"
+              class="d-block w-100 bg-image"
+              alt="..."
+            />
+          </div>
+          <!-- Hello there, I thought the convention of creating "sm " and "md" would fix the issue but I was wrong, I fixed it by adding it to the whole div -->
+          <!-- and it looks like that the "block " works better than flex-box in my case  -->
+          <div class="carousel-caption d-block d-sm-block d-md-block">
+            <h5 class="fs-3 fw-bold">Hello World!<br />
+              We Are Kasper We Make Art.</h5>
+            <p class="text-center">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt
+              nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet
+              elit, eget tincidunt.</p>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/HTML_And_CSS_Template_Two-main/images/landing.jpg"
+              class="d-block w-100 bg-image"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/HTML_And_CSS_Template_Two-main/images/landing.jpg"
+              class="d-block w-100 bg-image"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      </div>
+      <!-- I'm down 1 issue now lets go to the services section and fix the hieght issue by adding padding to the top and bottom
+      the min hieght in bootstrap is py-5 and it translates to 5*1.5rem which is not bad, to create the isllusion of a bigger view port use alot of them across the page :)
+      I've been learning for 2 weeks how to code and i'm out here giving advice :)
+      hence, don't take my advice -->
+  
+<!-- Services section -->
+ <div class="services container container-sm container-md py-5 pb-5  d-flex justify-content-center align-items-center flex-column gap-10 " style=" /*height:100vh;*/  overflow-x:hidden;">
+ 
+    <div class="main-heading">
+      <h2 class="fs-1 fw-bold text-center m-0 pt-5 border-bottom">Services </h2>
+      <p class="text-center ">
+        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+        tincidunt.
+      </p>
+    </div>
+    <div class="container container-sm container-md py-5">
+      <div class=" row row-cols-2 p-3 row-cols-lg-2 g-5 g-lg-5 row-cols-sm-2 g-5 g-sm-5 ">
+      <div class="srv-box  col  gy-5 d-flex d-sm-flex d-md-flex  flex-row jusify-content-start">
+        <i class="bi bi-pc-display-horizontal d-inline-flex " ></i>
+        <div class="text">
+          <h3 class="mb-10">Vorem amet intuitive</h3>
+          <p class="">
+            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+            tincidunt nibh pulvinar a. Curabitur aliquet quam.
+          </p>
+        </div>
+      </div>
+      <div class="srv-box col gy-5 d-flex d-sm-flex d-md-flex  flex-row jusify-content-start ">
+        <i class="bi bi-gear "></i>
+        <div class="text">
+          <h3>Vorem amet intuitive</h3>
+          <p>
+            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+            tincidunt nibh pulvinar a. Curabitur aliquet quam.
+          </p>
+        </div>
+      </div>
+      <div class="srv-box col gy-5 d-flex d-sm-flex d-md-flex  flex-row jusify-content-start pb-5">
+        <i class="bi bi-rulers"></i>
+        <div class="text">
+          <h3>Vorem amet intuitive</h3>
+          <p>
+            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+            tincidunt nibh pulvinar a. Curabitur aliquet quam.
+          </p>
+        </div>
+      </div>
+      <div class="srv-box col gy-5 d-flex d-sm-flex d-md-flex  flex-row jusify-content-start pb-5">
+        <i class="bi bi-camera"></i>
+        <div class="text">
+          <h3>Vorem amet intuitive</h3>
+          <p>
+            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+            tincidunt nibh pulvinar a. Curabitur aliquet quam.
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+<!-- Portfolio section -->
+<!-- I took this part of the code from the source provided -->
+  <div  class="" style="height:60%; background-image: url(/HTML_And_CSS_Template_Two-main/images/design-features.jpg); overflow: hidden;">
+    <div class="design container container-sm container-md d-flex flex-row jusify-content-center">
+      <div class="image col ">
+        <img  class="img-fluid " style="position: relative;
+        bottom: -150px;" decoding="async" src="/HTML_And_CSS_Template_Two-main/images/mobile.png" alt="Mobile" />
+      </div>
+  
+      <div class="text  d-flex flex-column jusify-content-center d-sm-flex d-md-flex justify-content-sm-center  " style="background-color: rgba(90, 178, 225, 0.343)">
+        <h2>Our Design Comes With...</h2>
+        <ul >
+          <li>Responsive Design</li>
+          <li>Modern And Clean Design</li>
+          <li>Clean Code</li>
+          <li>Browser Friendly</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio container container-md container-sm  pt-5 pb-5  d-flex d-sm-flex d-md-flex flex-column  mt-5 " >
+    <div class="container container-sm container-md">
+      <div class="main-heading">
+        <h2 class="fs-1 fw-bold text-center m-0 my-2 pt-20 border-bottom">Portfolio</h2>
+        <p class="text-center">
+          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+          tincidunt.
+        </p>
+      </div>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination pagination-sm  pagination-md  justify-content-center ">
+          <li class="page-item "> <a class="page-link" href="#">Previous</a> </li>
+          <li class="page-item active"><a class="page-link" href="#">All</a></li>
+          <li class="page-item"><a class="page-link" href="#">App</a></li>
+          <li class="page-item"><a class="page-link" href="#">Photo</a></li>
+          <li class="page-item"><a class="page-link" href="#">Web</a></li>
+          <li class="page-item"><a class="page-link" href="#">Print</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+    
+    </div>
+    <div class="imgs-container container container-sm container-md row row-cols-4 g-0">
+      <div class="box col ">
+        <img  class="w-100 "  decoding="async" src="images/shuffle-01.jpg" alt="" />
+        <div class="caption">
+          <h4>Awesome Image</h4>
+          <p>Photography</p>
+        </div>
+      </div>
+      <div class="box col ">
+        <img  class="w-100 " decoding="async" src="images/shuffle-02.jpg" alt="" />
+        <div class="caption">
+          <h4>Awesome Image</h4>
+          <p>Photography</p>
+        </div>
+      </div>
+      <div   class="box col ">
+        <img  class="w-100" decoding="async" src="images/shuffle-03.jpg" alt="" />
+        <div class="caption">
+          <h4>Awesome Image</h4>
+          <p>Photography</p>
+        </div>
+      </div>
+      <div class="box col ">
+        <img  class="w-100 " decoding="async" src="images/shuffle-04.jpg" alt="" />
+        <div class="caption">
+          <h4>Awesome Image</h4>
+          <p>Photography</p>
+        </div>
+      </div>
+      <div class="box col ">
+        <img  class="w-100" decoding="async" src="images/shuffle-05.jpg" alt="" />
+        <div class="caption">
+          <h4>Awesome Image</h4>
+          <p>Photography</p>
+        </div>
+      </div>
+      <div class="box col">
+        <img   class="w-100" decoding="async" src="images/shuffle-06.jpg" alt="" />
+        <div class="caption">
+          <h4>Awesome Image</h4>
+          <p>Photography</p>
+        </div>
+      </div>
+      <div class="box col ">
+        <img   class="w-100 " decoding="async" src="images/shuffle-07.jpg" alt="" />
+        <div class="caption">
+          <h4>Awesome Image</h4>
+          <p>Photography</p>
+        </div>
+      </div>
+      <div class="box col ">
+        <img  class="w-100" decoding="async" src="images/shuffle-08.jpg" alt="" />
+        <div class="caption">
+          <h4>Awesome Image</h4>
+          <p>Photography</p>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex d-sm-flex justify-content-sm-center jusify-content-center align-content-center align-items-center m-0 py-5">
+    <button type="button" class="btn btn-sm btn-md btn-outline-primary text-center align-items-center jusify-content-center " type="submit">More</button>
+  </div>
+  </div>
+  <!-- End Portfolio -->
+ <!-- Start Video -->
+<!-- this part has a lot of problems  but at least its responsive ::))-->
+ <div class="video  video-container " style=" background-color: rgba(204, 204, 204, 0.042);">
+  <video autoplay muted loop>
+    <source  src="images/awesome-video.mp4" type="video/mp4"  />
+  </video>
+  <div class="text text-center " style="z-index: 1;">
+    <h2>Super Awesome Video Here</h2>
+    <p>Its All You Need</p>
+    <button type="button" class="btn btn-outline-primary " type="submit">See More</button>
+  
+</div>
+</div>
+<!-- End Video -->
+ <!-- Start About -->
+ <div class="about sm md " style="  overflow: hidden;">
+  <div class="container container-sm container-md d-flex  flex-column jusify-content-center align-items-center">
+    <div class="main-heading ">
+      <h2 class="fs-1 fw-bold text-center m-0 pt-5 border-bottom">About Us</h2>
+      <p class="text-center">
+        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+        tincidunt.
+      </p>
+    </div>
+    <img class="h-100" decoding="async" src="images/about.png"  style=" overflow:hidden; position: relative;
+    bottom: -150px;"alt="" />
+  </div>
+</div>
+<!-- Start Stats -->
+<!-- the row issue is fixeeeeddd -->
+    <div class="stats  jusify-content-center position-relative" style="height: 50%;  background-image: url(/HTML_And_CSS_Template_Two-main/images/stats.png); object-fit: contain; overflow: hidden;">
+<div class="container container-md container-sm" style="/*height:20vh;*/  background-color: rgba(32, 30, 98, 0.192); z-index:1;"> 
+  <div class=" row row-cols-4 row-cols-sm-4 row-cols-md-4  g-0 ">
+    <div class="box col col-sm d-flex d-md-flex d-sm-flex jusify-content-center flex-column align-items-center">
+      <i class="bi bi-cup-hot"></i>
+      <div class="number fs-4 fw-bold">1.236</div>
+      <p class="fs-5 fw-bold text-center">Coffee Drinks</p>
+    </div>
+    <div class="box col col-sm d-flex d-md-flex d-sm-flex jusify-content-center flex-column align-items-center">
+      <i class="bi bi-archive"></i>
+      <div class="number fs-4 fw-bold">256</div>
+      <p class="fs-5 fw-bold text-center">Completed Projects</p>
+    </div>
+    <div class="box col col-sm d-flex d-md-flex d-sm-flex jusify-content-center flex-column align-items-center">
+      <i class="bi bi-envelope"></i>
+      <div class="number fs-4 fw-bold">1,743</div>
+      <p class="fs-5 fw-bold text-center">Mail Sent</p>
+    </div>
+    <div class="box col col-sm d-flex d-md-flex d-sm-flex jusify-content-center flex-column align-items-center">
+      <i class="bi bi-award"></i>
+      <div class="number fs-4 fw-bold">17</div>
+      <p class="fs-5 fw-bold text-center">Awards Received</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <!-- End Stats -->
+   <!-- Start Skills -->
+   <!-- the issue of response is still there  -->
+   <div class="our-skills container container-md container-sm ">
+    <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2">
+      <div class="testimonials col col-sm d-flex d-sm-flex d-md-flex flex-column align-items-center jusify-content-center">
+        <h3 class="fs-3 text-center pt-5">Testimonials</h3>
+        <p class="text-center">
+          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+          tincidunt.
+        </p>
+     
+        <div class="list-group list-group-sm list-group-md list-group-flush ">
+          <a href="#" class="list-group-item list-group-item-sm list-group-item-action flex-column align-items-start ">
+            <div class="d-flex w-100 justify-content-between">
+              <p class="mb-1">Testimonial 1</p>
+            </div>
+             <img class="img-thumbnail rounded-circle" decoding="async" src="images/skills-01.jpg" alt="" />
+          <p class="mb-1">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+                    tincidunt.</p>
+              
+            <small>John Doe, CEO</small>
+          </a>
+          <a href="#" class="list-group-item list-group-item-sm list-group-item-action flex-column align-items-start ">
+            <div class="d-flex w-100 justify-content-between">
+              <p class="mb-1">Testimonial 2</p>
+            </div>
+           <img  class= "img-thumbnail rounded-circle rounded-5 w-16 "decoding="async" src="images/skills-02.jpg" alt="" />
+            <p class="mb-1"> Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+                    tincidunt.</p>
+            <small class="text-muted">John Doe, CEO</small>
+          </a>
+        </div>
+        <nav  class="pb-5" aria-label="...">
+          <ul class="pagination pagination-sm pagination-md align-items-center ">
+            <li class="page-item active"   aria-current="page">
+              <span class="page-link"><i class="bi bi-circle"></i></span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#"><i class="bi bi-circle"></i></a></li>
+            <li class="page-item"><a class="page-link" href="#"><i class="bi bi-circle"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="skills col col-sm d-flex d-sm-flex d-md-flex flex-column">
+        <h3 class="fs-3 text-center pt-5">Skills</h3>
+        <p class="text-center">
+          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+          tincidunt.
+        </p>
+        <div class="d-flex flex-column gap-5 ">
+          <div class="row g-0 pt-3">
+          <h4>Adobe</h4>
+          <div class="progress toggle">
+            <div class="progress-bar progress-bar-sm"   role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><a style="color: black; text-decoration: none;" href="#">75%</a></div>
+          </div>
+        </div>
+        <div class=" g-0 row ">
+          <h4>Html &amp; Css</h4>
+          <div class="progress toggle">
+            <div class="progress-bar  progress-bar-sm"   role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><a style="color: black; text-decoration: none;" href="#">85%</a></div>
+          </div>
+        </div>
+        <div class=" g-0 row ">
+          <h4>JavaScript</h4>
+          <div class="progress toggle">
+            <div class="progress-bar  progress-bar-sm"   role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><a style="color: black; text-decoration: none;" href="#">80%</a></div>
+          </div>
+        </div>
+        <div class=" g-0 row ">
+          <h4>Php</h4>
+          <div class="progress toggle">
+            <div class="progress-bar  progress-bar-sm"   role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><a style="color: black; text-decoration: none;" href="#">90%</a></div>
+          </div>
+        </div>
+      </div>
+      </div>
+        </div>
+       
+     
+    
+      </div>
+    <!-- </div>
+    </div> -->
+    <!-- End Skills -->
+    <figure class=" quote text-center" >
+      <blockquote class="blockquote container container-md container-sm" style="background-color: rgba(255, 228, 196, 0.438);">
+        <p class="mb-0">accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.</p>
+      
+      </blockquote>
+      <figcaption class="blockquote-footer container container-md container-sm" style="background-color: rgba(255, 228, 196, 0.438);">
+        <cite title="Source Title">John Doe</cite>
+      </figcaption>
+    </figure>
+    <!-- End Quote -->
+    <div class="pricing py-5">
+      <div class="container container-sm container-md ">
+        <div class="main-heading">
+          <h2 class="fs-1 fw-bold text-center pt-5 border-bottom">Pricing</h2>
+          <p class="text-center">
+            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+            tincidunt.
+          </p>
+        </div>
+        <div class="row row-sm row-xs row-cols-4 row-cols-md-4 row-cols-sm-2 mb-3 text-center container container-sm container-md">
+          <div class="col col-sm">
+            <div class="card card-sm mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">basic</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">$19<small class="text-muted fw-light">/mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                   <li>Feature No 1</li>
+                   <li>Extra Feature</li>
+                   <li>Extra Feature No 2</li>
+                   <li>Feature</li>
+                </ul>
+                <button type="button" class=" btn btn-sm btn-lg btn-outline-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col col-sm">
+            <div class="card card-sm mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Premium</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Feature No 1</li>
+                   <li>Extra Feature</li>
+                   <li>Extra Feature No 2</li>
+                   <li>Feature</li>
+                </ul>
+                <button type="button" class=" btn btn-sm btn-lg btn-outline-primary">Buy now</button>
+              </div>
+            </div>
+          </div>
+          <div class="col col-sm">
+            <div class="card card-sm mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-white bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Pro</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">$39<small class="text-muted fw-light">/mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Feature No 1</li>
+                   <li>Extra Feature</li>
+                   <li>Extra Feature No 2</li>
+                   <li>Feature</li>
+                </ul>
+                <button type="button" class=" btn btn-sm btn-lg btn-primary">Buy now</button>
+              </div>
+            </div>
+          </div>
+              <div class="col col-sm">
+            <div class="card card-sm mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-white bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Platinum</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">$49<small class="text-muted fw-light">/mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                 <li>Feature No 1</li>
+                   <li>Extra Feature</li>
+                   <li>Extra Feature No 2</li>
+                   <li>Feature</li>
+                </ul>
+                <button type="button" class=" btn btn-sm btn-lg btn-primary">Buy now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex d-sm-flex d-md-flex flex-column jusify-content-center pb-5 border-bottom">
+        <p class="contact-text text-center">Contact us if you have special request</p>
+        <a  href="#" class="contact-link btn btn-primary  mx-auto" role="button">Contact Us</a>
+      </div>
+      </div>
+    </div>
+    <div class="subscribe py-5" >
+      <div class="container container-sm container-md d-flex  py-5 d-md-flex d-sm-flex flex-row justify-content-sm-between align-items-center py-5 ">
+        <form class="d-flex d-md-flex d-sm-flex flex-row" action="#">
+         
+          <div class="input-group input-group-sm mb-3">
+            
+            <input type="email" class="form-control mx-auto" placeholder="Email address" aria-label="Recipient's username" aria-describedby="button-addon2" style="background-color:rgba(255, 255, 255, 0.054);">
+            <button class="btn btn-sm btn-outline-secondary" type="button" id="button-addon2">Subscribe!</button>
+          </div>
+        </form>
+        <p class="text-right ps-5">
+          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blan dit aliquet elit, eget tincidunt.
+        </p>
+      </div>
+    </div>
+    <!-- End Subscribe -->
+<!-- Start Contact -->
+<div class="contact container container-md container-sm py-5">
+  <div class="container container-md container-sm">
+    <div class="main-heading">
+      <h2 class="fs-1 fw-bold text-center m-0 my-2 pt-20 border-bottom">Contact Us</h2>
+      <p class="text-center">
+        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+        tincidunt.
+      </p>
+    </div>
+    <div class="content d-flex d-md-flex d-sm-flex flex-row  row row-sm row-cols-2">
+      <div class="">
+      <form class=" g-3 ">
+        <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">name</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
+      </div>
+        <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Your message</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-primary">Contact us </button>
+        </div>
+      </form>
+    </div>
+      <div class="info d-flex d-flex-sm d-flex-md flex-column ">
+        <h4 class="fs-3">Get In Touch</h4>
+        <span class="phone">+00 123.456.789</span>
+        <span class="phone">+00 123.456.789</span>
+        <h4 class="fs-3 pt-5 ">Where We Are</h4>
+        <address>Awesome Address 17<br />New York, NYC<br />123-4567-890<br />USA</address>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Contact -->
+        <!-- Start Footer -->
+        <div class="footer"  >
+          <div class="container container-md container-sm" style="z-index: 99;"    >
+            <div class="d-flex d-sm-flex d-md-flex flex-column align-items-center py-5">
+            <img decoding="async" src="images/logo.png" alt="Logo" />
+            <p>We Are Social</p>
+            <div class="social-icons py-5" >
+              <i class="bi bi-facebook" style=" color: rgb(255, 255, 255);"></i>
+              <i class="bi bi-twitter" style=" color: rgb(255, 255, 255);"></i>
+              <i class="bi bi-house" style=" color: rgb(255, 255, 255);" ></i>
+              <i class="bi bi-linkedin" style=" color: rgb(255, 255, 255);"></i>
+            </div>
+            <p class="copyright">&copy; 2022 <span>Kasper</span> All Right Reserved</p>
+          </div>
+        </div>
+        </div> 
+
+
+
+      <!-- https://bitetoothpastebits.com/collections/all -->
+    
+    </main>
+
+  </body>
+</html>
